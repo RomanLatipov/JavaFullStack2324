@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+</head>
+
+<body>
+    <p id="changeme">Please change me to whatever you want!</p>
+    <button onclick="clickEventListener()">Change to your name</button>
+
+    <button onclick="addYourNameListener()">Click me to add more Your Name</button>
+    <ul id="addmore">
+
+    </ul>
+
+    <button onclick="displayTheChild()">Show me the nodes</button>
+    <ol id="ol">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ol>
+
+    <!-- <h3>Bubbling Event</h3>
+    <div style="border: 2px solid red;" onclick="alert('div was clicked')">
+        div element
+        <p style="border: 2px solid darkblue;" onclick="alert('paragraph was clicked')">
+            paragraph element
+            <span style = "border: 2px solid darkorange" onclick="alert('span was clicked')">span element</span>
+        </p>
+    </div> -->
+
+    <h3>Capturing Event</h3>
+    <div id="divCapture" style="border:2px solid red;">
+        div element
+        <p style="border: 2px solid darkblue;">
+            paragraph element
+            <span style="border: 2px solid darkorange">span element</span>
+        </p>
+    </div>
+
+    <h2>Using Fetch to grab a pokemon and displaying it!</h2>
+
+    <div class="mb-3" style="margin-left:1rem; margin-right:50%;">
+        <label>Pokemon Name</label>
+        <input id="pokemon" class="form-control">
+    </div>
+    <!-- <button style = "margin-left:1rem;" class="btn btn-primary" onclick="getPokemon()">Submit</button> -->
+    <button style = "margin-left:1rem;" class="btn btn-primary" onclick="anotherWay()">Submit</button>
+    <h3>Result</h3>
+    <div id="result">
+
+    </div>
+
+    <script src = "JSclasses.js">      
+
+    </script>
+</body>
+
+</html>

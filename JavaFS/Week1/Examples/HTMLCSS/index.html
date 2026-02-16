@@ -1,0 +1,189 @@
+<!DOCTYPE html> <!-- This declares this file will be an html doc-->
+<html lang="en">
+
+<head> <!-- the head tag contains all the metadata that this html file will use-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro2Web</title>
+    <style>
+        /* this is an example of id selector in CSS */
+        #add-red {
+            color: red;
+        }
+
+        /* This is an example of a class selector in CSS */
+        .add-blue {
+            color: blue;
+        }
+
+        /* This is an example of an element selector in CSS */
+        p {
+            color: blueviolet
+        }
+
+        .box{
+            /* Margins are the most outer later of the box model
+            It is mainly used to add spacing between element or viewport 
+            
+            Personally, I would use relative units to hekp with mobile experience or ever chaing sizes of the devices*/
+            margin: 5vw;
+            border: 2px solid black;
+            padding:8vh;
+            text-align:center;
+        }
+
+        .grid{
+            /*display property will specify that this will be a grid system */
+            display: grid;
+            /* fr unit is used for grid to have a relative size on each column
+            the higher the number the more weighted that column will be */
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows:repeat(2,1fr); /*grid rows are optional,css grid will add new rows if there are too many elements per each column */
+
+            gap:25 px;
+
+        }
+
+        /* so if you plan on adding on a specific element it is best to add another class */
+        .box-third{
+            grid-row: span 2;
+        }
+
+        .box-fourth{
+            grid-column: span 2;
+        }
+
+        </style>
+    <style>
+        .add-tur {
+            color: turquoise;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- Body tag contains all the content this html should display in your browser-->
+
+<body>
+    <!-- Heading tag is used to display titles or subtitles (h1 to h6)-->
+    <h1>Introduction to HTML</h1>
+    <h6>Tiny Heading</h6>
+
+    <!-- div tags are just the way to group tags together and it is used for organization-->
+    <div>
+        Divs are generic block elements that are used to separate a section in an HTML document
+        <div>
+            You can add more nested divs as much as you want!
+            They are divs within divs
+        </div>
+        <p> Paragraphs are design to display long texts in your website and it is more so to help developers
+            understand what is the purpose of this specific section of your website
+        </p>
+    </div>
+    <div>
+        <h3>Span Tag</h3>
+        <span>This is used to create inline elements</span>
+        <span>This is another span</span>
+    </div>
+    <h3> Be careful of how you structure your HTML</h3>
+    <div>
+        <span>Will this be inline?</span>
+        <span>Another span</span>
+    </div>
+    <div>
+        <span>Or not?</span>
+    </div>
+    <!-- Semantic tags are used to group things together like a div but it tells the developer what the group is for 
+     in more detail-->
+    <article>
+        <h2>Article Tag</h2>
+        <p>This is an article tag. It is used to group content that makes up an article or a section of a website.
+            It is more specific than a div tag and it helps developers understand what the purpose of this section is.
+        </p>
+    </article>
+    <!-- Another semantic tag that is more useful/more used that group an entire table together-->
+    <h3>
+        Table structure
+    </h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Owner</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Minnie</td>
+                <td>Stephen</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Buddy</td>
+                <td>Sarah</td>
+                <td>5</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <h3>Lists</h3>
+        <h4>Ordered List</h4>
+        <ol>
+            <li>Denoted by li</li>
+            <li>Use ordered list if sequence matters</li>
+        </ol>
+        <h4>Unordered List</h4>
+        <ul>
+            <li>Denoted by ul</li>
+            <li>Use unordered list if sequence does not matter</li>
+        </ul>
+    </div>
+    <!--Image tag will display an image in your website-->
+    <!--it needs html attributes to configure what image to use (src)-->
+    <!--img element is a self closing element meaning you don't do </img> mostly because
+      it doesn't make sense to use img tag to group things together-->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Wankaner-palace.png">
+
+    <h3>Introduction to CSS</h3>
+    <!--CSS Specificity
+      * This will determine what style should apply to a particular element(s) because sometimes
+      stylings conflict with each other
+      * General Rule:
+        1. Inline Styles (inside an element) - most specific will have highest priority
+        2. ID selector - will have high priority
+        3. class selector - will have second priority
+        4. element selector - least specific will have lowest priority
+      -->
+
+    <div>
+        <p id="add-red" style="color:chocolate">This is an example of id selector</p>
+        <p id="add-red" class="add-blue">This is an example of a class selector</p>
+        <p class="add-blue">This is an example of a class selector</p>
+        <p> This is an example of element selector</p>
+
+        <p class="add-green"> This is an example of external css being applied</p>
+
+        <h3>Specificity</h3>
+        <div>
+            <p class="add-blue add-tur">Paragraph 1</p>
+            <p class="add-tur add-blue">Paragraph 2</p>
+        </div>
+    </div>
+
+    <h3>Box Model</h3>
+    <div class ="box">
+        Box
+    </div>
+
+    <h3>Grid Demo</h3>
+    <div class="grid">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box box-third">3</div>
+        <div class="box box-fourth">4</div>
+        <div class="box box-fourth">5</div>
+    </div>
+
+</body>
+
+</html>
